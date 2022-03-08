@@ -1,0 +1,152 @@
+<nav class="navbar navbar-light navbar-vertical navbar-expand-xl">
+    <script>
+        var navbarStyle = localStorage.getItem("navbarStyle");
+        if (navbarStyle && navbarStyle !== 'transparent') {
+            document.querySelector('.navbar-vertical').classList.add(`navbar-${navbarStyle}`);
+        }
+    </script>
+    <div class="d-flex align-items-center">
+        <div class="toggle-icon-wrapper">
+
+            <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip"
+                data-bs-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span
+                        class="toggle-line"></span></span></button>
+
+        </div><a class="navbar-brand" href="/dashboard">
+            <div translate="no" class="d-flex align-items-center py-3"><span class="font-sans-serif">
+                    <%= extra.name %>
+                </span>
+            </div>
+        </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
+        <div class="navbar-vertical-content scrollbar">
+            <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
+                <li class="nav-item">
+                    <% if (settings.api.client.coins.enabled==true) { %>
+                        <!-- parent pages--><a class="nav-link" href="/store" role="button" aria-expanded="false">
+                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                        class="fas fa-coins"></span></span><span class="nav-link-text ps-1">
+                                    <%= coins %> Coin<%= coins==1 ? "" : "s" %>
+                                </span>
+                            </div>
+                        </a>
+                        <% } %>
+                            <!-- label-->
+                            <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                                <div class="col-auto navbar-vertical-label">Account
+                                </div>
+                                <div class="col ps-0">
+                                    <hr class="mb-0 navbar-vertical-divider" />
+                                </div>
+                            </div>
+                            <!-- parent pages--><a class="nav-link" href="/dashboard" role="button"
+                                aria-expanded="false">
+                                <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                            class="fas fa-calendar-alt"></span></span><span
+                                        class="nav-link-text ps-1">Dashboard</span>
+                                </div>
+                            </a>
+                            <!-- parent pages--><a class="nav-link" href="/profile" role="button" aria-expanded="false">
+                                <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                            class="fas fa-user"></span></span><span class="nav-link-text ps-1">User
+                                        Profile</span>
+                                </div>
+                            </a>
+                            <!-- parent pages--><a class="nav-link dropdown-indicator" href="#events" role="button"
+                                data-bs-toggle="collapse" aria-expanded="false" aria-controls="events">
+                                <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                            class="fas fa-calendar-day"></span></span><span
+                                        class="nav-link-text ps-1">Earn Coins</span>
+                                </div>
+                            </a>
+                            <ul class="nav collapse false" id="events">
+                                <% if (settings.api.arcio["afk page"].enabled==true) { %>
+                                    <li class="nav-item"><a class="nav-link" href="/afk" aria-expanded="false">
+                                            <div class="d-flex align-items-center"><span
+                                                    class="nav-link-text ps-1">AFK</span>
+                                            </div>
+                                        </a>
+                                        <!-- more inner pages-->
+                                    </li>
+                                    <% } %>
+                                        <li class="nav-item"><a class="nav-link" href="/redeem" aria-expanded="false">
+                                                <div class="d-flex align-items-center"><span
+                                                        class="nav-link-text ps-1">Redeem
+                                                        Coupon</span>
+                                                </div>
+                                            </a>
+                                            <!-- more inner pages-->
+                                        </li>
+                                        <% if (settings.api.client.j4r.enabled==true) { %>
+                                            <li class="nav-item"><a class="nav-link" href="/j4r" aria-expanded="false">
+                                                    <div class="d-flex align-items-center"><span
+                                                            class="nav-link-text ps-1">Join for
+                                                            Resources</span>
+                                                    </div>
+                                                </a>
+                                                <!-- more inner pages-->
+                                            </li>
+                                            <% } %>
+                            </ul>
+                            <% if (settings.api.client.coins.store.enabled==true) { %>
+                                <!-- parent pages--><a class="nav-link" href="/store" role="button"
+                                    aria-expanded="false">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fas fa-shopping-basket"></span></span><span
+                                            class="nav-link-text ps-1">Resources Store</span>
+                                    </div>
+                                </a>
+                                <% } %>
+                                    <!-- parent pages--><a class="nav-link" href="/subcriptions" role="button"
+                                        aria-expanded="false">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-rocket"></span></span><span
+                                                class="nav-link-text ps-1">Subcriptions</span>
+                                        </div>
+                                    </a>
+                </li>
+                <li class="nav-item">
+                    <!-- label-->
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Instances
+                        </div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider" />
+                        </div>
+                    </div>
+                    <!-- parent pages--><a class="nav-link" href="/servers/new" role="button" aria-expanded="false">
+                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                    class="fas fa-server"></span></span><span class="nav-link-text ps-1">Create
+                                Instances</span>
+                        </div>
+                    </a>
+                    <!-- parent pages--><a class="nav-link" href="/servers" role="button" aria-expanded="false">
+                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                    class="fas fa-tags"></span></span><span class="nav-link-text ps-1">Your
+                                instances</span>
+                        </div>
+                    </a>
+                    <!-- parent pages--><a class="nav-link" href="/faq" role="button" aria-expanded="false">
+                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                    class="fas fa-question-circle"></span></span><span
+                                class="nav-link-text ps-1">Faq</span>
+                        </div>
+                    </a>
+                    <!-- parent pages--><a class="nav-link" href="/panel" role="button" aria-expanded="false">
+                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                    class="fas fa-cloud"></span></span><span class="nav-link-text ps-1">Game
+                                Panel</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="settings mb-3">
+                <div class="card alert p-0 shadow-none" role="alert">
+                    <div class="d-grid"><a class="btn btn-sm btn-purchase" href="/logout" target="_blank">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
