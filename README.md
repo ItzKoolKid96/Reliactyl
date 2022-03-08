@@ -25,7 +25,7 @@ Reliactyl Client Premium Version
 `curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -`<br>
 `apt install nodejs`<br>
 `npm -v`<br>
-`git clone https://github.com/Reliactyl/Reliactyl.git`<br>
+`git clone https://github.com/reliactyldev/Reliactyl.git`<br>
 `cd Reliactyl`<br>
 `npm install`<br>
 `apt install nginx`<br>
