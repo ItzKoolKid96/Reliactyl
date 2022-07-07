@@ -1,5 +1,5 @@
 # Reliactyl
-![Reliactyl](https://cdn.discordapp.com/attachments/917136625639763998/940137262824443914/IMG_20220207_154846.png)<br>
+![Reliactyl](https://images-ext-2.discordapp.net/external/oTHtC3IuoPcvg3_2jyPCU-oyOP8hmDHWITaZi8nmTrc/https/repository-images.githubusercontent.com/467307664/a437f427-e1b7-4d21-848a-fd53d7ec79c9?width=812&height=457)<br>
 ![Relaictyl2](https://cdn.discordapp.com/attachments/917136625639763998/940145423341998080/IMG_20220207_162150.png)
 
 Reliactyl Client Premium Version
@@ -25,7 +25,7 @@ Reliactyl Client Premium Version
 `curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -`<br>
 `apt install nodejs`<br>
 `npm -v`<br>
-`git clone https://github.com/Reliactyl/Reliactyl.git`<br>
+`git clone https://github.com/reliactyldev/Reliactyl.git`<br>
 `cd Reliactyl`<br>
 `npm install`<br>
 `apt install nginx`<br>
