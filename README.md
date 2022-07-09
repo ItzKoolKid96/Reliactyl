@@ -81,4 +81,4 @@ location / {
 `pm2 save`
 
 
-# Join our [![Reliactyl](https://img.shields.io/badge/reliactyl-support%20server-7289da.svg)](https://discord.gg/neXYF47STz)
+# Join our [![Reliactyl](https://img.shields.io/badge/reliactyl-support%20server-7289da.svg)](https://discord.gg/9kz4n2F3th)
