@@ -68,6 +68,7 @@ location / {
   }
 }
 ```
+sudo ln -s /etc/nginx/sites-available/reliactyl.conf /etc/nginx/sites-enabled/reliactyl.conf
 <h2>Starting Reliactyl</h2>
 
 1. Testing<br>
